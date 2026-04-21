@@ -1,70 +1,64 @@
-﻿<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML5 Laboratory Activity 1</title>
-
-    <!-- JavaScript Alert -->
-    <script>
-        alert("Hello World");
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare Scheduler | User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-50 font-sans">
+    <div class="flex h-screen">
+        <nav class="w-64 bg-teal-800 text-white p-6 hidden md:block">
+            <h1 class="text-2xl font-bold mb-10">🐾 PetCare</h1>
+            <ul class="space-y-4">
+                <li><a href="#" class="block py-2 px-4 bg-teal-700 rounded">Dashboard</a></li>
+                <li><a href="#" class="block py-2 px-4 hover:bg-teal-700">My Pets</a></li>
+                <li><a href="#" class="block py-2 px-4 hover:bg-teal-700">Appointments</a></li>
+            </ul>
+        </nav>
 
-    <h1>Welcome to My First HTML5 Webpage</h1>
+        <main class="flex-1 overflow-y-auto p-8">
+            <header class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800">Pet Owner Dashboard</h2>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-500 italic">Welcome, Alex</span>
+                    <button class="bg-teal-600 text-white px-4 py-2 rounded-lg shadow hover:bg-teal-700 transition">+ Book Appointment</button>
+                </div>
+            </header>
 
-    <p>
-        This webpage was created as part of Laboratory Activity to demonstrate
-        basic HTML5 structure, elements, and syntax.
-    </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-yellow-400">
+                    <p class="text-gray-500 text-sm uppercase">Pending</p>
+                    <p class="text-2xl font-bold">2</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-400">
+                    <p class="text-gray-500 text-sm uppercase">Approved</p>
+                    <p class="text-2xl font-bold">1</p>
+                </div>
+            </div>
 
-    <!-- Unordered List -->
-    <h2>Unordered List</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <!-- Ordered List -->
-    <h2>Ordered List</h2>
-    <ol>
-        <li>Learn HTML basics</li>
-        <li>Create a webpage</li>
-        <li>Apply JavaScript</li>
-    </ol>
-
-    <!-- Hyperlink -->
-    <h2>Useful Link</h2>
-    <a href="https://www.w3schools.com" target="_blank">
-        Visit W3Schools
-    </a>
-
-    <!-- Image using a LINK -->
-    <h2>Sample Image</h2>
-    <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg">
-
-    <!-- Table -->
-    <h2>Student Information</h2>
-    <table border="1" cellpadding="10">
-        <tr>
-            <th>Name</th>
-            <th>Course</th>
-            <th>Year Level</th>
-        </tr>
-        <tr>
-            <td>Raineer P. Tamiat</td>
-            <td>BSIT</td>
-            <td>3rd Year</td>
-        </tr>
-        <tr>
-            <td>Regie P. Reales</td>
-            <td>BSIT</td>
-            <td>3rd Year</td>
-        </tr>
-    </table>
-
+            <section class="bg-white rounded-xl shadow-sm overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-600">Pet</th>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-600">Service</th>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-600">Date</th>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-600">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4">Buddy (Golden Retriever)</td>
+                            <td class="px-6 py-4">Vaccination</td>
+                            <td class="px-6 py-4">Oct 24, 2026 - 10:00 AM</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 text-xs font-semibold bg-green-100 text-green-700 rounded-full">Approved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
 
